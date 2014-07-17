@@ -28,7 +28,10 @@ namespace ManicTime.TagSource.SampleWeb
 
         public override void Initialize(ITagSourceSettings settings)
         {
-            Settings = settings ?? new SampleWebTagSourceSettings();
+            Settings = settings ?? new SampleWebTagSourceSettings
+            {
+                Url = "https://raw.githubusercontent.com/manictime/samplewebtagsource/master/ManicTime.TagSource.SampleWeb/SampleTags.txt"
+            };
             Url = ((SampleWebTagSourceSettings)Settings).Url;
         }
 
