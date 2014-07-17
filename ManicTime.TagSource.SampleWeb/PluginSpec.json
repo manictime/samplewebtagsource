@@ -1,0 +1,10 @@
+﻿{
+    "Id": "ManicTime.TagSource.SampleWeb",
+    "Version": "1.0.0.0",
+    "Name": "Tags from web",
+    "Description": "Gets tags from any web source",
+    "AllowUpdate": "True",
+    "AllowDisable":  "True",
+    "Type": "TagSource",
+    "AssemblyName": "ManicTime.TagSource.SampleWeb.dll"
+}

@@ -1,0 +1,5 @@
+﻿client 1, project 1, Activity 1; Activity 1 notes
+client 1, project 1, Activity 2; Activity 2 notes
+client 1, project 1, Activity 3; Activity 3 notes
+client 2, project 2
+client 3; Client 3 notes
