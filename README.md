@@ -7,7 +7,7 @@ To test it:
 1. Clone the repository and build it. 
 2. Go to bin/(Debug or Release)/Packages folder. In it, there should be a folder named ManicTime.TagSource.SampleWeb. Copy this whole folder to c:\Users\<user>\AppData\Local\Finkit\ManicTime\Plugins\Packages\
 3. Restart ManicTime. 
-4. Go to Tag editor and under *Tag sources -> Add* you should see *Tags from Web*
+4. Go to Tag editor and under *"Tag sources -> Add"* you should see *"Tags from Web"*
 
 Package folder is created in a post-build event
 
@@ -24,6 +24,9 @@ __What's in the package folder:__
 When the plugin is first created, it will look for a class derived from TagSourceSettingsViewModel. The view will be presented to the user, use it to collect the necessary information like username, password, service url and anything else you need for your plugin to work.
 
 When the user presses Ok, the settings will be saved. 
+
 Then the plugin will be created by calling CreateServerTagSourceInstance in class SampleWebTagSource. Any plugin can have more than one instance, you could for example load tags from GitHub from multiple accounts.
 
-Most of the work in your plugin is done by the Update function in SampleWebTagSourceInstance. In this function you can connect to the service and get the list of tags from the remote service. ManicTime will then present them in Add tag window.
+Most of the work in your plugin is done by the Update function in SampleWebTagSourceInstance. In this function you can use the settings to connect to the remote service and get the list of tags. 
+
+ManicTime will then present them in Add tag window.
