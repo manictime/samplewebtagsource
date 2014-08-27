@@ -6,6 +6,10 @@ using ManicTime.TagSource.SampleWeb.Helpers;
 
 namespace ManicTime.TagSource.SampleWeb
 {
+    /*
+     * Works with SampleWebTagSourceSettingsView view.
+     * */
+
     public class SampleWebTagSourceSettingsViewModel : TagSourceSettingsViewModel
     {
         private string _url;
@@ -28,6 +32,11 @@ namespace ManicTime.TagSource.SampleWeb
 
         public override void Initialize(ITagSourceSettings settings)
         {
+            /*
+             * When settings is null, user is creating the plugin
+             * When settings is not null, user is editing the plugin
+             */
+
             Settings = settings ?? new SampleWebTagSourceSettings
             {
                 Url = "https://raw.githubusercontent.com/manictime/samplewebtagsource/master/ManicTime.TagSource.SampleWeb/SampleTags.txt"
@@ -37,6 +46,11 @@ namespace ManicTime.TagSource.SampleWeb
 
         public override async Task<bool> BeforeOk()
         {
+            /*
+             * This is a chance to verify the data. If user didn't enter the correct values, return false
+             * Once this function returns true, OnOk will be called.
+             * */
+
             try
             {
                 IsRefreshing = true;
@@ -59,6 +73,12 @@ namespace ManicTime.TagSource.SampleWeb
 
         public override Task OnOk()
         {
+            /*
+             * Set all settings. After this function exits, Add window will close, settings will be saved and plugin isntance with these
+             * settings will be created.
+             * 
+             */
+
             ((SampleWebTagSourceSettings)Settings).Url = Url;
             return TaskEx.FromResult(true);
         }
