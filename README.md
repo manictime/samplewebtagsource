@@ -10,7 +10,8 @@ To test it:
 4. Go to Tag editor and under Tag sources -> Add you should see "Tags from Web"
 
 Package folder is created in a post-build event
-__What is in the package folder:__
+
+__What's in the package folder:__
 
 1. The dll of the plugin as well as any other dll not included in the .Net installation.
 2. There is also a PluginSpec.json file:
