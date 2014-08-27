@@ -7,7 +7,7 @@ To test it:
 1. Clone the repository and build it. 
 2. Go to bin/(Debug or Release)/Packages folder. In it, there should be a folder named ManicTime.TagSource.SampleWeb. Copy this whole folder to c:\Users\<user>\AppData\Local\Finkit\ManicTime\Plugins\Packages\
 3. Restart ManicTime. 
-4. Go to Tag editor and under Tag sources -> Add you should see "Tags from Web"
+4. Go to Tag editor and under *Tag sources -> Add* you should see *Tags from Web*
 
 Package folder is created in a post-build event
 
