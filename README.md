@@ -1,9 +1,9 @@
-#Sample Tag source
-==================
+#Sample ManicTime Client Tag source
 
 This is a sample plugin which shows how to write a plugin to import tags from other systems into ManicTime.
 
 To test it:
+
 1. Clone the repository and build it. 
 2. Go to bin/(Debug or Release)/Packages folder. In it, there should be a folder named ManicTime.TagSource.SampleWeb. Copy this whole folder to c:\Users\<user>\AppData\Local\Finkit\ManicTime\Plugins\Packages\
 3. Restart ManicTime. 
@@ -11,12 +11,13 @@ To test it:
 
 Package folder is created in a post-build event
 __What is in the package folder:__
+
 1. The dll of the plugin as well as any other dll not included in the .Net installation.
 2. There is also a PluginSpec.json file:
-..* __Id__ must be the same as the folder name
-..* __Name__ and __Description__ are used in ManicTime when the plugin is shown
-..* __Type__ needs to be TagSource
-..* _AssemblyName__ is the dll of the plugin.
+  - __Id__ must be the same as the folder name
+  - __Name__ and __Description__ are used in ManicTime when the plugin is shown
+  - __Type__ needs to be TagSource
+  - __AssemblyName__ is the dll of the plugin.
 
 ##How it works
 When the plugin is first created, it will look for a class derived from TagSourceSettingsViewModel. The view will be presented to the user, use it to collect the necessary information like username, password, service url and anything else you need for your plugin to work.
